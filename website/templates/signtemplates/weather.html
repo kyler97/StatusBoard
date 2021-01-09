@@ -1,0 +1,28 @@
+{% extends 'signtemplates/base.html' %}
+
+{% block content %}
+<h1>Current Air Quality</h1>
+<br/>
+
+
+
+{% if api %}
+	{% if api == 'error' %}
+		ther was an error
+	{% else %}
+<div container-sm>
+<div class="jumbotron {{cat_color}}">
+  <h1 class="display-4">Air Quality: {{api.1.AQI}} {{api.1.Category.Name}} </h1>
+  <p class="lead">{{api.1.ReportingArea}}</p>
+  <hr class="my-4">
+
+  <p>{{cat_desription}}</p>
+
+</div>
+</div>
+	
+	{% endif %}
+
+{% endif %}
+
+{% endblock %}

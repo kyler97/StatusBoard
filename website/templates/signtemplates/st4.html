@@ -1,0 +1,52 @@
+{% extends 'signtemplates/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<blockquote class="blockquote text-center">
+<h1 class="display-5">Station 4 Units</h1>
+</blockquote>
+
+
+ {% if all_items %}  
+ <div class="container">
+  <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Unit</th>
+      <th scope="col">Status</th>
+      <th scope="col">Problem</th>
+      <th scope="col">Location</th>
+      <th scope="col">Notified</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+   
+{% for things in all_items %}
+
+ 
+    <tbody>
+      <tr>
+       <td>{{things.unit_no}}</td>
+       <td>{{things.Status}}</td>
+       <td>{{things.Problem}}</td>
+       <td>{{things.Notified}}</td>
+       <td>{{things.Location}}</td>
+       <td>{{things.Date}}</td>
+      </tr>
+
+
+
+    </tbody>
+    {%endfor%}
+  </table>
+</div>
+ 
+{% endif %}
+
+    
+
+
+
+{% endblock %}
