@@ -13,9 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '=8%@ht+zn%9cl4$e^^lvgj1eq46$@x)e0v*ad^i2(1*!36as*7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jeffco-statusboard.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -66,8 +66,13 @@ WSGI_APPLICATION = 'dental.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'demo_01',
+        'USER' : 'kylerevans',
+        'PASSWORD' : 'Kyler1997',
+        'HOST' : 'database01.csxxwcd6t96q.us-east-2.rds.amazonaws.com',
+        'PORT' : '5432',
+
     }
 }
 
