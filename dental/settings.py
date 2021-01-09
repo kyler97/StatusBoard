@@ -1,5 +1,5 @@
 
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -16,7 +16,7 @@ SECRET_KEY = '=8%@ht+zn%9cl4$e^^lvgj1eq46$@x)e0v*ad^i2(1*!36as*7'
 DEBUG = False
 
 ALLOWED_HOSTS = ['jeffco-statusboard.herokuapp.com', '127.0.0.1']
-MEDIA_URL = '/images'
+MEDIA_URL = 'images/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 
     'django.middleware.common.CommonMiddleware',
