@@ -16,8 +16,13 @@ SECRET_KEY = '=8%@ht+zn%9cl4$e^^lvgj1eq46$@x)e0v*ad^i2(1*!36as*7'
 DEBUG = False
 
 ALLOWED_HOSTS = ['jeffco-statusboard.herokuapp.com', '127.0.0.1']
+MEDIA_URL = '/images'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -33,6 +38,9 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
+
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
