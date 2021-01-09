@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '=8%@ht+zn%9cl4$e^^lvgj1eq46$@x)e0v*ad^i2(1*!36as*7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['jeffco-statusboard.herokuapp.com', '127.0.0.1']
 
